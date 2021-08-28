@@ -1,0 +1,118 @@
+.test {
+  padding-top: 60px;
+
+  &__text {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 360px);
+    grid-template-rows: auto auto;
+
+    border: 3px solid #f6f6f6;
+  }
+
+  &__body {
+    padding: 40px;
+  }
+
+  &__question {
+    font-size: 22px;
+    line-height: 33px;
+    font-weight: 800;
+
+    margin-bottom: 30px;
+  }
+
+  &__options {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__option {
+    flex: 0 1 50%;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      outline: 1px solid $accentColor;
+    }
+  }
+
+  &__meaning {
+    padding: 40px 40px 30px;
+    border-left: 3px solid #f6f6f6;
+
+    grid-row: 1/3;
+    grid-column: 2/3;
+
+    ul li {
+      display: block;
+      padding-left: 63px;
+      background: url("../img/test/check.png") left top no-repeat;
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__option-img {
+    max-width: 335px;
+
+    height: 217px;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      width: 100%;
+
+      object-fit: cover;
+    }
+  }
+
+  &__option-desc {
+    text-align: center;
+    font-weight: 600;
+    color: rgba(#000, 0.5);
+
+    margin-top: 25px;
+  }
+
+  &__panel {
+    border-top: 3px solid #f6f6f6;
+    padding: 30px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  &__panel-btn {
+    display: flex;
+    align-items: center;
+
+    transition: 300ms;
+
+    &:hover {
+      color: darken($accentColor, 20%);
+    }
+
+    span {
+      margin-right: 15px;
+    }
+
+    &_next {
+      color: $accentColor;
+
+      cursor: pointer;
+    }
+  }
+}

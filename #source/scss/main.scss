@@ -1,0 +1,126 @@
+@import "normalize";
+@import "fonts";
+@import "vars";
+
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+section,
+header,
+footer,
+aside,
+main,
+article {
+  overflow-wrap: break-word;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  line-height: 1;
+  font-weight: normal;
+}
+
+body {
+  font-size: 16px;
+  line-height: 26px;
+
+  font-family: "Geometria", sans-serif;
+}
+
+button,
+input,
+textarea {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+button {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.title {
+  font-size: 35px;
+  line-height: 48px;
+  font-weight: 800;
+}
+
+.wrapper {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 1 auto;
+}
+
+.primary-btn {
+  display: inline-block;
+
+  padding: 22px 30px;
+
+  background-color: $accentColor;
+  color: #fff;
+
+  border-radius: 7px;
+  transition: 300ms;
+  font-weight: bold;
+
+  &:hover {
+    background-color: darken($accentColor, 10%);
+  }
+}
+
+.container {
+  max-width: $containerWidth;
+  margin: 0 auto;
+
+  @media screen and (max-width: $containerWidth) {
+    padding: 0 20px;
+    box-sizing: content-box;
+  }
+}
+
+/*=============================================
+=            blocks            =
+=============================================*/
+
+@import "blocks/header";
+@import "blocks/test";
+@import "blocks/services";
+@import "blocks/apartments";
+@import "blocks/about";
+@import "blocks/directions";
+@import "blocks/managment";
+@import "blocks/footer";
+
+/*=====  End of blocks  ======*/
+
+@import "media";

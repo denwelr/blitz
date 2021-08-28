@@ -1,0 +1,54 @@
+
+.managment {
+    background-color: #EEF3FA;
+    padding-top: 60px;
+
+    &__body {
+        display: flex;
+
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: contain;
+    }
+
+    &__content {
+        flex: 0 1 685px;
+        padding-bottom: 60px;
+    }
+
+    &__title {
+        max-width: 485px;
+        margin-bottom: 20px;
+    }
+
+    &__name {
+        font-size: 22px;
+        line-height: 33px;
+
+        margin-bottom: 15px;
+        font-weight: bold;
+        display: block;
+    }
+
+    &__text {
+        margin-bottom: 20px;
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    &__img {
+        margin-bottom: -60px;
+
+        object-fit: cover;
+    }
+
+    &__btn {
+        padding: 14px 22px;
+        font-weight: 500;
+        max-width: 270px;
+    }
+}
